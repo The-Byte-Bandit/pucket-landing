@@ -1,73 +1,102 @@
-# React + TypeScript + Vite
+<p align='center'>
+  <img src='https://i.imgur.com/KVmyXyo.png' alt='Vital - Vite Starter Template' width='600'/>
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align='center'>
+Mocking up web app with <b>Vital</b><sup><em>(speed)</em></sup><br>
+</p>
 
-Currently, two official plugins are available:
+<br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align='center'>
+<a href="https://vital.josepvidal.dev">Live Demo</a>
+</p>
 
-## React Compiler
+<br>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- ⚡️ [React 18](https://beta.reactjs.org/)
+- 🦾 TypeScript, of course
+- 🎨 [Tailwind](https://tailwindcss.com/) - next generation utility-first CSS
+- 👑 [Atomic Design organization](https://bradfrost.com/blog/post/atomic-web-design/)
+- 🗂 [Relative imports](https://github.com/vitejs/vite/issues/88#issuecomment-762415200)
+- 😃 [Hero icons](https://heroicons.com/)
+- ☁️ Deploy on Netlify, zero-config
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Coding Style
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- [ESLint](https://eslint.org/) - configured for React/Hooks & TypeScript
+- [Prettier](https://prettier.io/)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Dev tools
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- [TypeScript](https://www.typescriptlang.org/)
+- [Netlify](https://www.netlify.com/) - zero-config deployment
+
+## Try it now!
+
+### GitHub Template
+
+[Create a repo from this template on GitHub](https://github.com/jvidalv/vital/generate).
+
+### Clone to local
+
+If you prefer to do it manually with the cleaner git history
+
+```bash
+npx degit jvidalv/vital my-vital-app
+cd my-vital-app
+yarn # If you don't have yarn installed, run: npm install -g yarn
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Checklist
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+When you use this template, try follow the checklist to update your info properly
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- [ ] Rename `name` and `author` fields in `package.json`
+- [ ] Change the author name in `LICENSE`
+- [ ] Change the title in `index.html`
+- [ ] Change the favicon in `public`
+- [ ] Modify the manifest in `public`
+- [ ] Clean up the README's
+
+And, enjoy :)
+
+## Usage
+
+### Development
+
+Just run and visit http://127.0.0.1:3000/
+
+```bash
+yarn dev
 ```
+
+### Build
+
+To build the App, run
+
+```bash
+yarn build
+```
+
+And you will see the generated file in `dist` that ready to be served.
+
+### Deploy on Netlify
+
+Go to [Netlify](https://app.netlify.com/start) and select your repository, `OK` along the way, and your App will be live in a minute.
+
+### Issues
+
+#### Husky
+
+If pre-commit hooks are not working be sure that you have installed husky: `husky install`.
+
+By default this command should be triggered after yarn/npm deps are installed.
+
+## Why
+
+I have created several React apps recently. Setting the configs up is kinda the bottleneck for me to make the ideas simply come true within a very short time.
+
+So I made this starter template for myself to create apps more easily, along with some good practices that I have learned from making those apps. Feel free to tweak it or even maintains your own forks.
