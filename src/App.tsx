@@ -27,16 +27,16 @@ function App() {
             Now with <span className="text-cyan-600 font-semibold">Tailwind CSS</span>
           </p>
         </div>
-        
+
         <div className="mb-8">
-          <button 
+          <button
             onClick={() => setCount((count) => count + 1)}
             className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 ease-in-out"
           >
             Count is {count}
           </button>
         </div>
-        
+
         <div className="space-y-4 text-sm text-gray-600">
           <p className="bg-gray-50 rounded-lg p-3">
             Edit <code className="bg-gray-200 px-2 py-1 rounded text-gray-800 font-mono text-xs">src/App.tsx</code> and save to test HMR
