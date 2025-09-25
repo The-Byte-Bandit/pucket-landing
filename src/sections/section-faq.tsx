@@ -9,9 +9,11 @@ export default function SectionFAQ() {
         { id: 5, q: "Advanced trading tools?", a: "Yes, charting, alerts, and automated strategies are supported." },
     ];
     return (
-        <section id="help" className="max-w-screen-xl mx-auto pt-20">
-            <h3 className="text-center text-2xl font-bold text-white">Learn more about Pucket</h3>
-            <div className="mt-8">
+        <section id="faq" className="max-w-screen-xl mx-auto pt-24">
+            <p className="text-center text-md text-white">Popular <span className="bg-[linear-gradient(135deg,#84C718_0%,#09791A_100%)] bg-clip-text text-transparent">questions</span></p>
+            <h3 className="mt-3 text-center text-3xl sm:text-5xl text-white">Learn more about Pucket</h3>
+            <p className="mt-3 text-center text-gray-400">We accept 100+ cryptocurrencies around the world</p>
+            <div className="mt-10">
                 <Accordion items={items} />
             </div>
         </section>
