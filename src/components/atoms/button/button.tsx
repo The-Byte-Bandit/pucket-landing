@@ -2,12 +2,12 @@ import { forwardRef, ComponentProps } from "react";
 
 const Button = forwardRef<
   HTMLButtonElement,
-  Omit<ComponentProps<"button">, "className">
->(({ children, ...rest }, ref) => {
+  ComponentProps<"button">
+>(({ children, className, ...rest }, ref) => {
   return (
     <button
       ref={ref}
-      className="w-full sm:w-auto flex-none bg-blue-600 hover:bg-blue-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200"
+      className={"w-full sm:w-auto flex-none text-white text-lg leading-6 font-semibold py-3 px-6 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-emerald-600/40 focus:outline-none transition-transform duration-200 ease-out shadow-[0_8px_24px_rgba(9,121,26,0.35)] bg-[linear-gradient(135deg,#84C718_0%,#09791A_100%)] transform-gpu will-change-transform hover:scale-[1.03] active:scale-95 " + className}
       {...rest}
     >
       {children}
