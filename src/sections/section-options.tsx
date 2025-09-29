@@ -33,7 +33,7 @@ export default function SectionOptions() {
     ];
 
     return (
-        <section id="options" className="max-w-screen-xl mx-auto pt-16 md:pt-24 px-4 md:px-8">
+        <section id="options" className="max-w-screen-xl mx-auto pt-24 md:pt-32 px-4 md:px-8">
             <p className="text-center text-sm md:text-md text-white">
                 We deliver <span className="bg-[linear-gradient(135deg,#84C718_0%,#09791A_100%)] bg-clip-text text-transparent">best solution</span>
             </p>

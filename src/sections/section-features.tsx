@@ -21,7 +21,7 @@ export default function SectionFeatures() {
     ];
 
     return (
-        <section id="features" className="max-w-screen-xl mx-auto pt-16 md:pt-32 xl:pt-40 items-start px-4 sm:px-8">
+        <section id="features" className="max-w-screen-xl mx-auto pt-20 md:pt-32 xl:pt-40 items-start px-4 sm:px-8">
             <div className="grid lg:grid-cols-2 gap-8 md:gap-10">
                 <div className="flex flex-col gap-3 pt-6 md:pt-10 xl:pt-20">
                     <p className="text-md text-white">

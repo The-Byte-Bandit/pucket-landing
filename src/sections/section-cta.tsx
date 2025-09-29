@@ -3,7 +3,7 @@ import bgGroup from "../assets/bg_group.png";
 
 export default function SectionCTA() {
     return (
-        <section id="cta" className="max-w-screen-xl mx-auto pt-20 px-4 md:px-8">
+        <section id="cta" className="max-w-screen-xl mx-auto pt-0 md:pt-10 px-4 md:px-8">
             <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
                 <img
                     src={bgGroup}

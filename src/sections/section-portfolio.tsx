@@ -12,7 +12,7 @@ export default function SectionPortfolio() {
     ];
 
     return (
-        <section id="portfolio" className="max-w-screen-2xl mx-auto pt-40 flex flex-col-reverse lg:flex-row md:gap-10 items-center px-4 md:px-8">
+        <section id="portfolio" className="max-w-screen-2xl mx-auto pt-20 md:pt-40 flex flex-col-reverse lg:flex-row md:gap-10 items-center px-4 md:px-8">
             {/* Left floating cards */}
             <div className="relative flex mx-auto w-full max-w-2xl mt-10 lg:mt-0">
                 <div className="absolute -inset-10 rounded-full opacity-40 pointer-events-none"

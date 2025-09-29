@@ -23,7 +23,7 @@ export default function SectionBySide() {
     ];
 
     return (
-        <section id="support" className="max-w-screen-xl mx-auto pt-32 px-4 md:px-8">
+        <section id="support" className="max-w-screen-xl mx-auto pt-20 md:pt-32 px-4 md:px-8">
             <p className="text-center text-md text-white">
                 Always by <span className="bg-[linear-gradient(135deg,#84C718_0%,#09791A_100%)] bg-clip-text text-transparent">your side</span>
             </p>

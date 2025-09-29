@@ -20,7 +20,7 @@ export default function SectionCoins() {
     ];
 
     return (
-        <section id="coins" className="max-w-screen-xl mx-auto pt-14 px-4 sm:px-8">
+        <section id="coins" className="max-w-screen-xl mx-auto pt-0 md:pt-14 px-4 sm:px-8">
             <p className="text-center text-md tracking-wider text-white">
                 Featured <span className="bg-[linear-gradient(135deg,#84C718_0%,#09791A_100%)] bg-clip-text text-transparent">crypto coins</span>
             </p>
