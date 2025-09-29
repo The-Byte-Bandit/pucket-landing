@@ -30,11 +30,11 @@ export default function Footer() {
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-between gap-8">
-                    <div className="flex flex-col lg:flex-row gap-8 xl:gap-20">
+                    <div className="flex flex-row md:flex-col lg:flex-row gap-8 xl:gap-20">
                         {/* Links */}
                         <div>
-                            <p className="text-white text-xl font-semibold mb-3">Links</p>
-                            <ul className="space-y-2 text-md">
+                            <p className="text-white text-md font-semibold mb-3">Links</p>
+                            <ul className="space-y-2 text-sm">
                                 <li><a href="#trusted" className="hover:text-white">Trusted by</a></li>
                                 <li><a href="#coins" className="hover:text-white">Coins</a></li>
                                 <li><a href="#features" className="hover:text-white">Features</a></li>
@@ -45,8 +45,8 @@ export default function Footer() {
 
                         {/* Other pages */}
                         <div>
-                            <p className="text-white text-xl font-semibold mb-3">Other Pages</p>
-                            <ul className="space-y-2 text-md">
+                            <p className="text-white text-md font-semibold mb-3">Other Pages</p>
+                            <ul className="space-y-2 text-sm">
                                 <li><a className="hover:text-white">Terms</a></li>
                                 <li><a className="hover:text-white">Disclosures</a></li>
                                 <li><a className="hover:text-white">Latest News</a></li>
@@ -56,9 +56,9 @@ export default function Footer() {
 
                     {/* Download */}
                     <div>
-                        <p className="text-white text-xl font-semibold mb-3">Download app</p>
+                        <p className="text-white text-md font-semibold mb-3">Download app</p>
                         <div className="space-y-3">
-                            <div className="h-12 w-44 rounded-xl border border-white/10 bg-white/[0.06] text-white/80 text-md flex items-center justify-center gap-2 duration-300 hover:scale-105 active:scale-95 cursor-pointer">
+                            <div className="h-12 w-44 rounded-xl border border-white/10 bg-white/[0.06] text-white/80 text-sm flex items-center justify-center gap-2 duration-300 hover:scale-105 active:scale-95 cursor-pointer">
                                 <img src={googlePlay} alt="Google Play" className="h-6 w-6" />
                                 <span>Google Play</span>
                             </div>
