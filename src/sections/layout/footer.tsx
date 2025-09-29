@@ -5,8 +5,8 @@ import { FaTwitter } from "react-icons/fa6";
 
 export default function Footer() {
     return (
-        <footer className="pb-16 max-w-screen-xl mx-auto text-gray-400">
-            <div className="grid md:grid-cols-2 gap-8 border-t border-white/10 pt-12">
+        <footer className="pb-16 max-w-screen-xl mx-auto text-gray-400 px-4 md:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-0 xl:gap-8 border-t border-white/10 pt-12">
                 {/* Brand + description */}
                 <div>
                     <div className="flex items-center space-x-3">
@@ -29,27 +29,29 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="flex justify-between">
-                    {/* Links */}
-                    <div>
-                        <p className="text-white text-xl font-semibold mb-3">Links</p>
-                        <ul className="space-y-2 text-md">
-                            <li><a href="#trusted" className="hover:text-white">Trusted by</a></li>
-                            <li><a href="#coins" className="hover:text-white">Coins</a></li>
-                            <li><a href="#features" className="hover:text-white">Features</a></li>
-                            <li><a href="#portfolio" className="hover:text-white">Portfolio</a></li>
-                            <li><a href="#faq" className="hover:text-white">FAQs</a></li>
-                        </ul>
-                    </div>
+                <div className="flex flex-col md:flex-row justify-between gap-8">
+                    <div className="flex flex-col lg:flex-row gap-8 xl:gap-20">
+                        {/* Links */}
+                        <div>
+                            <p className="text-white text-xl font-semibold mb-3">Links</p>
+                            <ul className="space-y-2 text-md">
+                                <li><a href="#trusted" className="hover:text-white">Trusted by</a></li>
+                                <li><a href="#coins" className="hover:text-white">Coins</a></li>
+                                <li><a href="#features" className="hover:text-white">Features</a></li>
+                                <li><a href="#portfolio" className="hover:text-white">Portfolio</a></li>
+                                <li><a href="#faq" className="hover:text-white">FAQs</a></li>
+                            </ul>
+                        </div>
 
-                    {/* Other pages */}
-                    <div>
-                        <p className="text-white text-xl font-semibold mb-3">Other Pages</p>
-                        <ul className="space-y-2 text-md">
-                            <li><a className="hover:text-white">Terms</a></li>
-                            <li><a className="hover:text-white">Disclosures</a></li>
-                            <li><a className="hover:text-white">Latest News</a></li>
-                        </ul>
+                        {/* Other pages */}
+                        <div>
+                            <p className="text-white text-xl font-semibold mb-3">Other Pages</p>
+                            <ul className="space-y-2 text-md">
+                                <li><a className="hover:text-white">Terms</a></li>
+                                <li><a className="hover:text-white">Disclosures</a></li>
+                                <li><a className="hover:text-white">Latest News</a></li>
+                            </ul>
+                        </div>
                     </div>
 
                     {/* Download */}
@@ -63,7 +65,6 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <div className="mt-10 h-px w-full bg-white/10" />

@@ -23,11 +23,11 @@ export default function SectionBySide() {
     ];
 
     return (
-        <section id="support" className="max-w-screen-xl mx-auto pt-24">
+        <section id="support" className="max-w-screen-xl mx-auto pt-32 px-4 md:px-8">
             <p className="text-center text-md text-white">
                 Always by <span className="bg-[linear-gradient(135deg,#84C718_0%,#09791A_100%)] bg-clip-text text-transparent">your side</span>
             </p>
-            <h2 className="mt-3 text-center text-3xl sm:text-5xl text-white">
+            <h2 className="mt-3 text-center text-3xl sm:text-4xl text-white">
                 Be the first to use our Pucket!
             </h2>
             <p className="mt-4 text-center text-gray-400 max-w-3xl mx-auto">

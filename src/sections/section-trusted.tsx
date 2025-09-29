@@ -14,8 +14,8 @@ const coins = [
 
 export default function SectionTrusted() {
     return (
-        <section id="trusted" className="max-w-screen-xl mx-auto pt-14">
-            <p className="text-center text-md tracking-wider text-white/90">
+        <section id="trusted" className="max-w-screen-xl mx-auto -mt-20 pt-32 px-4 sm:px-8">
+            <p className="text-center text-md tracking-wider text-white">
                 Trusted by top <span className="bg-[linear-gradient(135deg,#84C718_0%,#09791A_100%)] bg-clip-text text-transparent">crypto platforms</span>
             </p>
             <div className="mt-6 overflow-hidden">
