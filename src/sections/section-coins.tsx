@@ -1,7 +1,7 @@
 import { RiBtcFill } from "react-icons/ri";
 import { SiEthereum, SiLitecoin, SiPolkadot, SiSolana, SiChainlink } from "react-icons/si";
 import { motion } from "framer-motion";
-import { fadeIn, fadeUp, staggerContainer } from "../components/motion";
+import { fadeIn, staggerContainer } from "../components/motion";
 
 type CoinCard = {
     label: string;

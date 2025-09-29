@@ -1,7 +1,7 @@
 import { FiHeadphones, FiUsers, FiGift } from "react-icons/fi";
 import bgGraph from '../assets/bg-graph.png'
 import { motion } from "framer-motion";
-import { fadeIn, fadeUp, staggerContainer } from "../components/motion";
+import { fadeIn, staggerContainer } from "../components/motion";
 
 export default function SectionBySide() {
     const items = [
