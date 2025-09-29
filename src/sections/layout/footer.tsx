@@ -17,14 +17,14 @@ export default function Footer() {
                         Framer; a template for startups and blockchain services.</p>
 
                     <div className="mt-5 flex items-center gap-3">
-                        <div className="w-9 h-9 grid place-items-center rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-md duration-300 hover:scale-105 active:scale-95">
-                            <FaFacebookF className="w-6 h-6" fill="white" />
+                        <div className="w-8 h-8 grid place-items-center rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-md duration-300 hover:scale-105 active:scale-95">
+                            <FaFacebookF className="w-4 h-4" fill="white" />
                         </div>
-                        <div className="w-9 h-9 grid place-items-center rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-md duration-300 hover:scale-105 active:scale-95">
-                            <FaInstagram className="w-6 h-6" fill="white" />
+                        <div className="w-8 h-8 grid place-items-center rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-md duration-300 hover:scale-105 active:scale-95">
+                            <FaInstagram className="w-4 h-4" fill="white" />
                         </div>
-                        <div className="w-9 h-9 grid place-items-center rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-md duration-300 hover:scale-105 active:scale-95">
-                            <FaTwitter className="w-6 h-6" fill="white" />
+                        <div className="w-8 h-8 grid place-items-center rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-md duration-300 hover:scale-105 active:scale-95">
+                            <FaTwitter className="w-4 h-4" fill="white" />
                         </div>
                     </div>
                 </div>
