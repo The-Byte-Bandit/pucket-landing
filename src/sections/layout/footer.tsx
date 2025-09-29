@@ -1,14 +1,16 @@
 import logoUrl from "../../assets/logo.png";
 import googlePlay from "../../assets/google-play.png";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../../components/motion";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 
 export default function Footer() {
     return (
         <footer className="pb-16 max-w-screen-xl mx-auto text-gray-400 px-4 md:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-0 xl:gap-8 border-t border-white/10 pt-12">
+            <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-0 xl:gap-8 border-t border-white/10 pt-12" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }} variants={staggerContainer}>
                 {/* Brand + description */}
-                <div>
+                <motion.div variants={fadeIn}>
                     <div className="flex items-center space-x-3">
                         <img src={logoUrl} alt="Pucket logo" className="h-12 w-12 rounded" />
                         <span className="tracking-tight text-white text-2xl font-bold">Puck<span className="bg-[linear-gradient(135deg,#84C718_0%,#09791A_100%)] bg-clip-text text-transparent">et</span></span>
@@ -27,9 +29,9 @@ export default function Footer() {
                             <FaTwitter className="w-4 h-4" fill="white" />
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="flex flex-col md:flex-row justify-between gap-8">
+                <motion.div variants={fadeIn} className="flex flex-col md:flex-row justify-between gap-8">
                     <div className="flex flex-row md:flex-col lg:flex-row gap-8 xl:gap-20">
                         {/* Links */}
                         <div>
@@ -64,11 +66,11 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
 
             <div className="mt-10 h-px w-full bg-white/10" />
-            <p className="mt-6 text-center text-sm">Copyright ©{new Date().getFullYear()} Pucket. All rights reserved</p>
+            <motion.p className="mt-6 text-center text-sm" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.6, ease: "easeOut" }}>Copyright ©{new Date().getFullYear()} Pucket. All rights reserved</motion.p>
         </footer>
     );
 }

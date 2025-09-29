@@ -5,6 +5,9 @@ import { SiEthereum, SiLitecoin, SiPolkadot } from "react-icons/si";
 import { IoIosLink } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
 import bgGroup from "../assets/bg_group.png";
+import { motion } from "framer-motion";
+import { fadeIn, fadeUp as globalFadeUp, staggerContainer } from "../components/motion";
+import CountUp from "../components/CountUp";
 
 export default function SectionFeatures() {
     const bullets = [
@@ -23,7 +26,7 @@ export default function SectionFeatures() {
     return (
         <section id="features" className="max-w-screen-xl mx-auto pt-20 md:pt-32 xl:pt-40 items-start px-4 sm:px-8">
             <div className="grid lg:grid-cols-2 gap-8 md:gap-10">
-                <div className="flex flex-col gap-3 pt-6 md:pt-10 xl:pt-20">
+                <motion.div className="flex flex-col gap-3 pt-6 md:pt-10 xl:pt-20" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={globalFadeUp as any}>
                     <p className="text-md text-white">
                         Why choose <span className="bg-[linear-gradient(135deg,#84C718_0%,#09791A_100%)] bg-clip-text text-transparent">Pucket</span>
                     </p>
@@ -31,18 +34,18 @@ export default function SectionFeatures() {
                         Features of the crypto framer mobile application
                     </h3>
                     <div className="mt-6 md:mt-10 flex flex-col gap-4 md:gap-5">
-                        {bullets.map(({ icon: Icon, text }) => (
-                            <div key={text} className="flex items-center gap-3">
+                        {bullets.map(({ icon: Icon, text }, idx) => (
+                            <motion.div key={text} className="flex items-center gap-3" custom={idx + 1} variants={globalFadeUp as any}>
                                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/10 bg-white/[0.03] grid place-items-center flex-shrink-0">
                                     <Icon className="w-4 h-4 md:w-5 md:h-5 text-[#84C718]" />
                                 </div>
                                 <p className="text-sm md:text-base text-white/90">{text}</p>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="relative flex item-center justify-center w-full mt-8 lg:mt-0">
+                <motion.div className="relative flex item-center justify-center w-full mt-8 lg:mt-0" initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, ease: "easeOut", delay: 0.12 }}>
                     <img src={bgGroup} alt="portfolio background" className="absolute inset-0 w-full h-full object-cover pointer-events-none" style={{ mixBlendMode: 'screen' }} />
                     <div className="relative max-w-sm w-full rounded-2xl md:rounded-3xl border border-white/10 bg-white/[0.04] p-4 md:p-6 overflow-hidden backdrop-blur-xl">
                         <div className="absolute inset-0 opacity-[0.12] pointer-events-none" style={{
@@ -72,23 +75,31 @@ export default function SectionFeatures() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
             <div className="mt-8 md:mt-10 col-span-2">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <motion.div
+                    className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={staggerContainer}
+                >
                     {[
-                        { k: "6M+", v: "Active users" },
-                        { k: "24/7", v: "Users support" },
-                        { k: "160+", v: "Countries" },
-                        { k: "$22B+", v: "Trade volume" },
+                        { k: 6, suffix: "M+", v: "Active users", decimals: 0 },
+                        { k: 24, suffix: "/7", v: "Users support", decimals: 0 },
+                        { k: 160, suffix: "+", v: "Countries", decimals: 0 },
+                        { k: 22, suffix: "B+", v: "Trade volume", decimals: 0 },
                     ].map((m) => (
-                        <div key={m.k} className="rounded-xl md:rounded-2xl border border-white/10 bg-white/[0.03] px-4 md:px-8 py-6 md:py-10 text-center duration-300 hover:scale-105">
-                            <p className="text-2xl md:text-3xl bg-[linear-gradient(135deg,#84C718_0%,#09791A_100%)] bg-clip-text text-transparent">{m.k}</p>
+                        <motion.div key={m.k} variants={fadeIn} className="rounded-xl md:rounded-2xl border border-white/10 bg-white/[0.03] px-4 md:px-8 py-6 md:py-10 text-center duration-300 hover:scale-105">
+                            <p className="text-2xl md:text-3xl bg-[linear-gradient(135deg,#84C718_0%,#09791A_100%)] bg-clip-text text-transparent">
+                                <CountUp to={m.k as number} durationMs={1200} />{m.suffix}
+                            </p>
                             <p className="mt-1 md:mt-2 text-xs md:text-sm text-gray-400">{m.v}</p>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

@@ -1,5 +1,7 @@
 import { RiBtcFill } from "react-icons/ri";
 import { SiEthereum, SiLitecoin, SiPolkadot, SiSolana, SiChainlink } from "react-icons/si";
+import { motion } from "framer-motion";
+import { fadeIn, fadeUp, staggerContainer } from "../components/motion";
 
 type CoinCard = {
     label: string;
@@ -27,9 +29,15 @@ export default function SectionCoins() {
             <h2 className="mt-4 text-center text-3xl sm:text-4xl text-white">
                 Top crypto coins updates
             </h2>
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+            <motion.div
+                className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={staggerContainer}
+            >
                 {cards.map(({ label, name, price, Icon, color }) => (
-                    <div key={label} className="rounded-2xl border border-white/10 bg-white/[0.03] py-5 px-8 xl:px-5 duration-300 hover:scale-105">
+                    <motion.div key={label} variants={fadeIn} className="rounded-2xl border border-white/10 bg-white/[0.03] py-5 px-8 xl:px-5 duration-300 hover:scale-105">
                         <p className="text-sm text-gray-400 mb-5">{label}</p>
                         <div className="flex flex-col justify-start items-start gap-3">
                             <Icon className="w-9 h-9" color={color} />
@@ -38,9 +46,9 @@ export default function SectionCoins() {
                                 <p className="text-sm leading-tight">{price}<span className="text-gray-400"> USD</span></p>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </section>
     );
 }

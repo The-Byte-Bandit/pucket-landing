@@ -1,5 +1,7 @@
 import { FiHeadphones, FiUsers, FiGift } from "react-icons/fi";
 import bgGraph from '../assets/bg-graph.png'
+import { motion } from "framer-motion";
+import { fadeIn, fadeUp, staggerContainer } from "../components/motion";
 
 export default function SectionBySide() {
     const items = [
@@ -34,22 +36,23 @@ export default function SectionBySide() {
                 Get faster, safer, more affordable cloud object storage with no central point of failure.
             </p>
 
-            <div className="mt-10 relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-10">
+            <motion.div className="mt-10 relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-10"
+                initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6, ease: "easeOut" }}>
                 {/* green waveform */}
                 <img className="absolute left-0 right-0 -bottom-6 w-full opacity-80" src={bgGraph} />
 
-                <div className="relative grid sm:grid-cols-3 gap-8">
+                <motion.div className="relative grid sm:grid-cols-3 gap-8" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={staggerContainer}>
                     {items.map(({ title, desc, Icon }) => (
-                        <div key={title} className="text-center px-4 py-6">
+                        <motion.div key={title} variants={fadeIn} className="text-center px-4 py-6">
                             <div className="mx-auto w-12 h-12 rounded-full bg-white/[0.06] backdrop-blur-lg border border-white/10 grid place-items-center shadow">
                                 <Icon className="w-6 h-6 text-[#84C718]" />
                             </div>
                             <p className="mt-4 text-white font-semibold">{title}</p>
                             <p className="mt-2 text-sm text-gray-400 max-w-xs mx-auto">{desc}</p>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </section>
     );
 }

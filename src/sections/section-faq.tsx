@@ -1,4 +1,6 @@
 import Accordion, { FAQItem } from "../components/accordion";
+import { motion } from "framer-motion";
+import { fadeIn, fadeUp, staggerContainer } from "../components/motion";
 
 export default function SectionFAQ() {
     const items: FAQItem[] = [
@@ -10,12 +12,14 @@ export default function SectionFAQ() {
     ];
     return (
         <section id="faq" className="max-w-screen-xl mx-auto pt-20 md:pt-32 px-4 md:px-8">
-            <p className="text-center text-md text-white">Popular <span className="bg-[linear-gradient(135deg,#84C718_0%,#09791A_100%)] bg-clip-text text-transparent">questions</span></p>
-            <h3 className="mt-3 text-center text-3xl sm:text-4xl text-white">Learn more about Pucket</h3>
-            <p className="mt-3 text-center text-gray-400">We accept 100+ cryptocurrencies around the world</p>
-            <div className="mt-10">
-                <Accordion items={items} />
-            </div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={staggerContainer}>
+                <p className="text-center text-md text-white">Popular <span className="bg-[linear-gradient(135deg,#84C718_0%,#09791A_100%)] bg-clip-text text-transparent">questions</span></p>
+                <motion.h3 variants={fadeUp} className="mt-3 text-center text-3xl sm:text-4xl text-white">Learn more about Pucket</motion.h3>
+                <motion.p variants={fadeUp} className="mt-3 text-center text-gray-400">We accept 100+ cryptocurrencies around the world</motion.p>
+                <motion.div variants={fadeIn} className="mt-10">
+                    <Accordion items={items} />
+                </motion.div>
+            </motion.div>
         </section>
     );
 }
