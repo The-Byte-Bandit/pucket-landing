@@ -4,6 +4,7 @@ import { FiPieChart, FiSmartphone} from "react-icons/fi";
 import { FaShieldHalved, FaArrowRightLong} from "react-icons/fa6";
 import { motion, useReducedMotion, useInView, AnimatePresence, useAnimation } from "framer-motion";
 import { slideInLeft, slideInRight, staggerContainer, fadeUp} from "../components/motion";
+
 import {useRef, useEffect} from "react";
 
 interface Bullet {
@@ -16,7 +17,7 @@ interface Bullet {
 const SectionPortfolio: React.FC = () => {
   const ref = useRef < HTMLElement > (null);
   const isInView = useInView(ref, {
-    amount: 0.2
+    amount: 0.2, once: true
   });
   const shouldReduceMotion = useReducedMotion();
   const controls = useAnimation();
@@ -234,6 +235,7 @@ const SectionPortfolio: React.FC = () => {
                   </motion.span>
                 ))}
               </motion.h2>
+
 
               <motion.p className="mt-4 text-gray-400 max-w-xl" variants={fadeUp}>
                 {descriptionWords.map((word, i) => (

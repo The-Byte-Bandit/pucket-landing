@@ -14,7 +14,7 @@ interface CoinCard {
 
 const SectionCoins: React.FC = () => {
   const ref = useRef<HTMLElement>(null);
-  const isInView = useInView(ref, { amount: 0.2 });
+  const isInView = useInView(ref, { amount: 0.2, once: true });
   const shouldReduceMotion = useReducedMotion();
   const transition = shouldReduceMotion
     ? { duration: 0 }

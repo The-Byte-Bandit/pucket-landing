@@ -7,7 +7,7 @@ import { useRef } from "react";
 
 const SectionHero: React.FC = () => {
   const ref = useRef<HTMLElement>(null);
-  const isInView = useInView(ref, { amount: 0.2 });
+  const isInView = useInView(ref, { amount: 0.2, once: true });
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 300], [0, -50]);
   const shouldReduceMotion = useReducedMotion();
